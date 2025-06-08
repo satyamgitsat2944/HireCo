@@ -1,0 +1,130 @@
+.job-post-container {
+    min-height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+  }
+  
+  .job-post-card {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .job-post-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+  }
+  
+  .job-post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .input-group label {
+    font-weight: 500;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .input-icon {
+    font-size: 1rem;
+    color: #6366f1;
+  }
+  
+  .input-group input,
+  .input-group select,
+  .input-group textarea {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(15, 23, 42, 0.5);
+    color: #e2e8f0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .input-group input:focus,
+  .input-group select:focus,
+  .input-group textarea:focus {
+    outline: none;
+    border-color: rgba(99, 102, 241, 0.8);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  }
+  
+  .input-group textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .label-with-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .info-tag {
+    font-size: 0.8rem;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .auth-button {
+    margin-top: 1rem;
+  }
+  
+  .button-loading {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  @media (max-width: 768px) {
+    .job-post-container {
+      padding: 1rem;
+    }
+    
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+    
+    .input-group textarea {
+      min-height: 100px;
+    }
+  }

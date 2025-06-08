@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+  background-image: linear-gradient(to bottom right, #006663, #111111);
+}
+
+.hero {
+  padding: 2rem;
+}
+
+.content {
+  margin-left: 50rem;
+  margin-top: 8rem;
+  color: #fff;
+}
+
+.wrapper {
+  margin-top: 9rem;
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.904) 20%,
+    rgba(0, 0, 0, 0.97) 50%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+
+.itemLeft {
+  width: 200px;
+  height: 100px;
+  background-color: #000;
+  border-radius: 6px;
+  position: absolute;
+  animation-timing-function: linear;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-name: scrollLeft;
+}
+
+.item1 { animation-delay: calc(30s / 8 * (8 - 1) * -1); }
+.item2 { animation-delay: calc(30s / 8 * (8 - 2) * -1); }
+.item3 { animation-delay: calc(30s / 8 * (8 - 3) * -1); }
+.item4 { animation-delay: calc(30s / 8 * (8 - 4) * -1); }
+.item5 { animation-delay: calc(30s / 8 * (8 - 5) * -1); }
+.item6 { animation-delay: calc(30s / 8 * (8 - 6) * -1); }
+.item7 { animation-delay: calc(30s / 8 * (8 - 7) * -1); }
+.item8 { animation-delay: calc(30s / 8 * (8 - 8) * -1); }

@@ -1,0 +1,216 @@
+.update-profile-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+  }
+  
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .glass-card {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(15, 23, 42, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    color: #e2e8f0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to bottom right,
+      rgba(99, 102, 241, 0.1),
+      rgba(99, 102, 241, 0),
+      rgba(99, 102, 241, 0.1)
+    );
+    transform: rotate(30deg);
+    z-index: -1;
+  }
+  
+  .profile-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .auth-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .title-icon {
+    font-size: 1.8rem;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .input-group label {
+    font-weight: 500;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .input-icon {
+    font-size: 1.1rem;
+  }
+  
+  .input-group input,
+  .input-group textarea,
+  .input-group select {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(15, 23, 42, 0.5);
+    color: #e2e8f0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .input-group input:focus,
+  .input-group textarea:focus,
+  .input-group select:focus {
+    outline: none;
+    border-color: rgba(99, 102, 241, 0.8);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  }
+  
+  .niches-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .niches-container select {
+    width: 100%;
+  }
+  
+  .niche-icon {
+    margin-right: 0.5rem;
+  }
+  
+  .file-upload-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .file-upload-label {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    background-color: rgba(99, 102, 241, 0.2);
+    color: #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+  }
+  
+  .file-upload-label:hover {
+    background-color: rgba(99, 102, 241, 0.3);
+  }
+  
+  .file-input {
+    display: none;
+  }
+  
+  .resume-preview {
+    margin-top: 0.5rem;
+  }
+  
+  .resume-link {
+    color: #60a5fa;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .resume-link:hover {
+    color: #3b82f6;
+    text-decoration: underline;
+  }
+  
+  .auth-button {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .auth-button:hover {
+    background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  }
+  
+  .auth-button:disabled {
+    background: #4b5563;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .button-icon {
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .update-profile-container {
+      padding: 1rem;
+    }
+    
+    .glass-card {
+      padding: 1.5rem;
+    }
+    
+    .niches-container {
+      grid-template-columns: 1fr;
+    }
+  }
